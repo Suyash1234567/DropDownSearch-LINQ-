@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Assignment29thAugust.Models.StudentViewModel>
+
+<table border="1" align="center" width="100%">
+    @foreach (var item in Model)
+    {
+        <tr style="text-align:center;font:large;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+            <td>@item.StudentClass</td>
+            <td>@item.StudentAge</td>
+        </tr>
+    }
+</table>
+
