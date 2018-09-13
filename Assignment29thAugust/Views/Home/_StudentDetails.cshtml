@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Assignment29thAugust.Models.StudentJoinedData>
+@{
+    ViewData["Title"] = "_StudentDetails";
+}
+
+<h2>Student Details</h2>
+<table border="1" align="center" width="100%">
+    <tr>
+        <th align="center">Id</th>
+        <th align="center">Name</th>
+        <th align="center">Class</th>
+        <th align="center">Age</th>
+        <th align="center">Fees</th>
+        <th align="center">Date</th>3
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr style="text-align:center;font:large;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <td>@item.StudentId</td>
+        <td>@item.StudentName</td>
+        <td>@item.StudentClass</td>
+        <td>@item.StudentAge</td>
+        <td>@item.StudentFees</td>
+        <td>@item.Date</td>
+    </tr>
+    }
+</table>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Assignment29thAugust.Models.StudentJoinedData>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row" id="divInitialLoad">
+    <partial name="_StudentDetails" for="@Model" />
+</div>
+
+<div id="divAjaxLoad" style="margin-top:50px">
+</div>
+
+<div class="row" style="margin-top:100px">
+    Search a Student by his name:
+    <input type="text" id="searchByName" />
+</div>
+<div class="row" style="margin-top:100px">
+    Search a Student by his:
+    <select id="SearchByAttribute">
+        <option value="">Select</option>
+        <option value="StudentID">Student ID</option>
+        <option value="StudentName">Student Name</option>
+        <option value="StudentAge">Student Age</option>
+        <option value="StudentClass">Student Class</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    Order by:
+    <select id="SortByAttribute">
+        <option value="">Select</option>
+        <option value="StudentID">Student ID</option>
+        <option value="StudentName">Student Name</option>
+        <option value="StudentAge">Student Age</option>
+        <option value="StudentClass">Student Class</option>
+    </select>
+    &nbsp;Range: &nbsp;
+    From <input type="text" id="MinRange" />
+    to  <input type="text" id="MaxRange" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="searchByInput" />
+</div>
+<br />
+<div class="row">
+    <input type="button" value="Search" id="btnSearch" data-attr="search" />
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/student.js"></script>
